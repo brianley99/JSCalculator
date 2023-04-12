@@ -75,9 +75,40 @@
     </header>
 
     <main class="container my-3">
-        <h1>App UI Goes Here</h1>
-        <input id="message" type="text" placeholder="Enter a Message">
-        <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+        <h1>JavaScript Calculator</h1>
+        <div style="width: 300px;">
+            <label for="firstNumber" class="form-label">First Number</label>
+            <input id="firstNumber" type="number" class="form-control" value="5" placeholder="First Number">
+        </div>
+        <div style="width: 300px;">
+            <label for="secondNumber" class="form-label">Second Number</label>
+            <input id="secondNumber" type="number" class="form-control" value="5" placeholder="Second Number">
+        </div>
+        <div style="width: 300px;">
+            <label for="numberSeries" class="form-label">Series of Numbers</label>
+            <input id="numberSeries" type="number" value="123" class="form-control" placeholder="Series of numbers">
+        </div>
+        <div class="mt-3">
+            <button onclick="add()" class="btn btn-outline-dark">Add</button>
+            <button onclick="subtract()" class="btn btn-outline-dark">Subtract</button>
+            <button onclick="multiply()" class="btn btn-outline-dark">Multiply</button>
+            <button onclick="divide()" class="btn btn-outline-dark">Divide</button>
+        </div>
+        <div class="mt-3">
+            <button onclick="sumAll()" class="btn btn-outline-dark px-3">Sum All</button>
+            <button onclick="multiplyAll()" class="btn btn-outline-dark px-3">Multiply All</button>
+            <button onclick="minimum()" class="btn btn-outline-dark px-3">Minumim</button>
+            <button onclick="maximum()" class="btn btn-outline-dark px-3">Maximum</button>
+            <button onclick="average()" class="btn btn-outline-dark px-3">Average</button>
+        </div>
+        <hr>
+        <h5>Results</h5>
+        <div class="display-2 text-danger my-3">
+            <!-- Results -->
+            <div class="display-2 text-danger m-3 rounded-3 border border-danger-subtle p-2 bg-body-secondary"
+                id="results">
+                0</div>
+        </div>
     </main>
 
     <!-- TODO: UPDATE TO SAME AS PORTFOLIO -->
@@ -109,9 +140,6 @@
 
     <!-- App JS-->
     <script src="/js/site.js"></script>
-    <script>
-        document.getElementById('btnSubmit').addEventListener('click', displayMessage);
-    </script>
 
 </body>
 
